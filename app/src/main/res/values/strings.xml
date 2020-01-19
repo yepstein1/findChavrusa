@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">findChavrusa</string>
+    <string name="action_settings">Settings</string>
+    <string name="please_enter_email">Please enter email</string>
+    <string name="please_enter_password">password</string>
+</resources>
