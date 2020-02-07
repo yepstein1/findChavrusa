@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.findchavrusa.Database.AppViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
     EditText mEmail;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     String email;
     AppViewModel mModel;
     public static final int NEW_WORD_ACTIVITY_REQUEST_CODE = 1;
+
 
     String password;
 
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mModel = new ViewModelProvider(this).get(AppViewModel.class);
@@ -44,6 +47,9 @@ final Intent intent = new Intent(this,Main2Activity.class);
                 startActivity(intent);
                 //hopefully send to db
                 mModel.insert(u);
+                String snackBarMessage = "Welcome" + u.getUserName();
+                Snackbar snackbar = Snackbar.make(view, snackBarMessage, Snackbar.LENGTH_LONG);
+                snackbar.show();
 
             }
         });
