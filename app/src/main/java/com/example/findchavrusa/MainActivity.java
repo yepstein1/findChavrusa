@@ -2,43 +2,52 @@ package com.example.findchavrusa;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.ViewModelProvider;
 
-import android.util.Log;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.EditText;
+import com.example.findchavrusa.Database.AppViewModel;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
     EditText mEmail;
     EditText mPassword;
     String email;
+    AppViewModel mModel;
+    public static final int NEW_WORD_ACTIVITY_REQUEST_CODE = 1;
 
     String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        mModel = new ViewModelProvider(this).get(AppViewModel.class);
 final Intent intent = new Intent(this,Main2Activity.class);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // getUserInfo();
-                intent.putExtra("user",getUserInfo() );
+                Users u = getUserInfo();
+                //  intent.putExtra("user",u);
                 startActivity(intent);
+                //hopefully send to db
+                mModel.insert(u);
+
             }
         });
+
     }
 
     @Override
@@ -70,9 +79,12 @@ final Intent intent = new Intent(this,Main2Activity.class);
         email = mEmail.getText().toString();
         Log.i( "getUserInfo: ",email);
         password = mPassword.getText().toString();
+        //  email= "nnn";
         Users user = new Users(email, password);
         return user;
 
 
     }
+
+
 }
