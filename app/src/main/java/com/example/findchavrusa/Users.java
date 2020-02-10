@@ -29,7 +29,7 @@ public class Users implements Serializable {
         return uid;
     }
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @NonNull
     public int uid;
 

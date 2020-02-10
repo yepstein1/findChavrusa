@@ -17,6 +17,7 @@ import java.util.List;
 
 public class Main2Activity extends AppCompatActivity {
     private AppViewModel mUserViewModel;
+    Users u;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,4 +60,6 @@ Users u =(Users) o;
 
 
     }
+
+
 }
