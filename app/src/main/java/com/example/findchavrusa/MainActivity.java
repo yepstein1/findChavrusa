@@ -41,9 +41,10 @@ final Intent intent = new Intent(this,Main2Activity.class);
             public void onClick(View view) {
                 Users u = getUserInfo();
                 //  intent.putExtra("user",u);
+                mModel.insert(u);
+
                 startActivity(intent);
                 //hopefully send to db
-                mModel.insert(u);
 
             }
         });

@@ -4,4 +4,7 @@
     <string name="please_enter_email">Please enter email</string>
     <string name="please_enter_password">password</string>
     <string name="empty_not_saved">not saved</string>
+    <string name="title_activity_insert_topic">InsertTopic</string>
+    <string name="tv_topic">Please enter a topic</string>
+    <string name="please_enter_your_user_name">Please enter your user name</string>
 </resources>
