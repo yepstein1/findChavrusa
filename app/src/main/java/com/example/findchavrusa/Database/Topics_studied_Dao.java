@@ -18,4 +18,9 @@ public interface Topics_studied_Dao {
     @Query("SELECT * FROM TOPICS_STUDYING WHERE topic = :selectedTopic")
     LiveData<List<Topics_studied>> getTopics(String selectedTopic);
 
+
+    @Query("SELECT * FROM TOPICS_STUDYING")
+    LiveData<List<Topics_studied>> getTopics();
+
+
 }

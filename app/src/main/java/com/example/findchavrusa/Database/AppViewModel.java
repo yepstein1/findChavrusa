@@ -19,6 +19,11 @@ public class AppViewModel extends AndroidViewModel {
         super(application);
         mRepository = new AppRepository(application);
         mUsers = mRepository.getmUsers();
+        mTopics = mRepository.getmTopics();
+    }
+
+    public void setRepositoryTopics(String s) {
+        mRepository.setTopics(s);
     }
 
     public void insert(Users user) {
@@ -33,7 +38,7 @@ public class AppViewModel extends AndroidViewModel {
         return mUsers;
     }
 
-    public LiveData<List<Topics_studied>> getmTopics() {
+    public LiveData<List<Topics_studied>> getmTopics(String s) {
         return mTopics;
     }
 }

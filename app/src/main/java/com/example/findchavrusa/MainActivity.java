@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mModel = new ViewModelProvider(this).get(AppViewModel.class);
-final Intent intent = new Intent(this,Main2Activity.class);
+        final Intent intent = new Intent(this, DisplayTopicsActivity.class);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

@@ -13,7 +13,7 @@ import java.util.List;
 
 public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserViewHolder> {
     private final LayoutInflater mInflater;
-    private List<Users> mUsers;
+    private List<Topics_studied> mTopics;
 
     public UserListAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
@@ -29,8 +29,8 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
 
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
-        if (mUsers != null) {
-            Users current = mUsers.get(position);
+        if (mTopics != null) {
+            Topics_studied current = mTopics.get(position);
             holder.userItemView.setText(current.getUserName());
         } else {
             // Covers the case of data not being ready yet.
@@ -38,15 +38,15 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserVi
         }
     }
 
-    void setUsers(List<Users> users) {
-        mUsers = users;
+    void setTopics(List<Topics_studied> topics) {
+        mTopics = topics;
         notifyDataSetChanged();
     }
 
     @Override
     public int getItemCount() {
-        if (mUsers != null)
-            return mUsers.size();
+        if (mTopics != null)
+            return mTopics.size();
         else
             return 0;
     }

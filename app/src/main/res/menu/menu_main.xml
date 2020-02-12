@@ -1,10 +1,29 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.findchavrusa.MainActivity">
+    tools:context=".activities.InsertTopicActivity">
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
-        app:showAsAction="never" />
+
+
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_sbout"
+        android:icon="@drawable/search_page_background"
+        android:title="@string/action_favorite"
+
+        android:color="#FFFFFF"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/search_page_background"
+        android:title="@string/action_favorite"
+
+        android:color="#FFFFFF"
+        app:showAsAction="always" />
+
+
 </menu>

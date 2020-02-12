@@ -7,4 +7,7 @@
     <string name="title_activity_insert_topic">InsertTopic</string>
     <string name="tv_topic">Please enter a topic</string>
     <string name="please_enter_your_user_name">Please enter your user name</string>
+    <string name="action_favorite">go to search page</string>
+    <string name="title_activity_browse">BrowseActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
 </resources>

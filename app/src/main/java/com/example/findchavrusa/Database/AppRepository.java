@@ -1,6 +1,7 @@
 package com.example.findchavrusa.Database;
 
 import android.app.Application;
+import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 
@@ -9,18 +10,26 @@ import com.example.findchavrusa.Users;
 
 import java.util.List;
 
-class AppRepository {
+public class AppRepository {
     private UserDao mUserDao;
     private LiveData<List<Users>> mUsers;
     private Topics_studied_Dao mTopicsDao;
     private LiveData<List<Topics_studied>> mTopics;
+    String topic;
 
     AppRepository(Application application) {
         AppDataBase db = AppDataBase.getDatabase(application);
         mUserDao = db.userDao();
         mTopicsDao = db.topicDao();
         mUsers = mUserDao.getUsers();
+//mTopics=mTopicsDao.getTopics();
 
+    }
+
+    void setTopics(String s) {
+        mTopics = mTopicsDao.getTopics(s);
+
+        Log.i("RepoLog", mTopicsDao.toString());
     }
 
     LiveData<List<Users>> getmUsers() {
