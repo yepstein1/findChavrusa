@@ -19,11 +19,16 @@ public class AppViewModel extends AndroidViewModel {
         super(application);
         mRepository = new AppRepository(application);
         mUsers = mRepository.getmUsers();
-        mTopics = mRepository.getmTopics();
+
     }
 
     public void setRepositoryTopics(String s) {
         mRepository.setTopics(s);
+        setmTopics();
+    }
+
+    private void setmTopics() {
+        mTopics = mRepository.getmTopics();
     }
 
     public void insert(Users user) {

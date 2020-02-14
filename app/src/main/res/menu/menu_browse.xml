@@ -1,14 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".activities.InsertTopicActivity">
+    tools:context=".activities.BrowseActivity">
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
 
 
-        app:showAsAction="always" />
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_toggle_auto_save"
+        android:title="@string/title_use_auto_save"
+        android:checkable="true"
+        app:showAsAction="never" />
+
     <item
         android:id="@+id/action_sbout"
         android:icon="@drawable/search_page_background"
@@ -18,12 +25,11 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/action_favorite"
-        android:icon="@drawable/ic_explore"
+        android:id="@+id/action_insert"
+        android:icon="@drawable/go_to_insert_page"
         android:title="@string/action_favorite"
 
         android:color="#FFFFFF"
         app:showAsAction="always" />
-
 
 </menu>

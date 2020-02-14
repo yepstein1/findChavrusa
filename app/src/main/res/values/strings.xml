@@ -10,4 +10,6 @@
     <string name="action_favorite">go to search page</string>
     <string name="title_activity_browse">BrowseActivity</string>
     <string name="title_activity_about">AboutActivity</string>
+    <string name="about">Welcome to findChavrusa ever be learning an obscure topic and could\'t find anywone to discuss it with. This app is for you-you can loook up a database of what diffrent people are learning and get contact info for people learning the same topic as you</string>
+    <string name="title_use_auto_save">AutoSave</string>
 </resources>
