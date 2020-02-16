@@ -1,23 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".activities.InsertTopicActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.AboutActivity">
+
 
     <item
-        android:id="@+id/action_sbout"
-        android:icon="@drawable/about_icon_foreground"
-        android:title="@string/action_favorite"
-
-        android:color="#FFFFFF"
-        app:showAsAction="always" />
-
-    <item
-        android:id="@+id/action_favorite"
+        android:id="@+id/action_browse"
         android:icon="@drawable/ic_explore"
         android:title="@string/action_favorite"
 
         android:color="#FFFFFF"
         app:showAsAction="always" />
 
+    <item
+        android:id="@+id/action_insert"
+        android:icon="@drawable/go_to_insert_page"
+        android:title="@string/action_favorite"
 
+        android:color="#FFFFFF"
+        app:showAsAction="always" />
 </menu>

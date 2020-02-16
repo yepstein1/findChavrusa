@@ -4,14 +4,12 @@
     <string name="please_enter_email">Please enter email</string>
     <string name="please_enter_password">password</string>
     <string name="empty_not_saved">not saved</string>
-    <string name="title_activity_add_topic">AddTopicActivity</string>
-    <string name="title_activity_login">Sign in</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_insert_topic">InsertTopic</string>
+    <string name="tv_topic">Please enter a topic</string>
+    <string name="please_enter_your_user_name">Please enter your user name</string>
+    <string name="action_favorite">go to search page</string>
+    <string name="title_activity_browse">BrowseActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="about">Welcome to findChavrusa ever be learning an obscure topic and could\'t find anywone to discuss it with. This app is for you-you can loook up a database of what diffrent people are learning and get contact info for people learning the same topic as you</string>
+    <string name="title_use_auto_save">AutoSave</string>
 </resources>
