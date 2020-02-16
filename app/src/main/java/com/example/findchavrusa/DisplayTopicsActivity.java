@@ -23,7 +23,7 @@ public class DisplayTopicsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         load();
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
-        final UserListAdapter adapter = new UserListAdapter(this);
+        final TopicListAdapter adapter = new TopicListAdapter(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         mUserViewModel = new ViewModelProvider(this).get(AppViewModel.class);

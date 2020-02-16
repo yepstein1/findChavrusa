@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserViewHolder> {
+public class TopicListAdapter extends RecyclerView.Adapter<TopicListAdapter.UserViewHolder> {
     private final LayoutInflater mInflater;
     private List<Topics_studied> mTopics;
 
-    public UserListAdapter(Context context) {
+    public TopicListAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
     }
 

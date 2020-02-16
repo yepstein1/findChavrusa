@@ -11,18 +11,17 @@ import com.example.findchavrusa.Users;
 import java.util.List;
 
 public class AppRepository {
-    private UserDao mUserDao;
+
     private LiveData<List<Users>> mUsers;
     private Topics_studied_Dao mTopicsDao;
     private LiveData<List<Topics_studied>> mTopics;
     String topic;
 
     AppRepository(Application application) {
-        AppDataBase db = AppDataBase.getDatabase(application);
-        mUserDao = db.userDao();
+        AppDatabase db = AppDatabase.getDatabase(application);
+
         mTopicsDao = db.topicDao();
-        mUsers = mUserDao.getUsers();
-//mTopics=mTopicsDao.getTopics();
+
 
     }
 
@@ -40,18 +39,10 @@ public class AppRepository {
         return mTopics;
     }
 
-    void insert(final Users user) {
-        AppDataBase.databaseWriteExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                mUserDao.insertAll(user);
-            }
-        });
-    }
 
 
     void insertTopic(final Topics_studied topic) {
-        AppDataBase.databaseWriteExecutor.execute(new Runnable() {
+        AppDatabase.databaseWriteExecutor.execute(new Runnable() {
             @Override
             public void run() {
                 mTopicsDao.insertTopic(topic);

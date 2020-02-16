@@ -13,22 +13,22 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Database(entities = {Users.class, Topics_studied.class}, version = 1, exportSchema = false)
-public abstract class AppDataBase extends RoomDatabase {
-    public abstract UserDao userDao();
+public abstract class AppDatabase extends RoomDatabase {
+
 
     public abstract Topics_studied_Dao topicDao();
 
-    private static volatile AppDataBase INSTANCE;
+    private static volatile AppDatabase INSTANCE;
     private static final int NUMBER_OF_THREADS = 4;
     static final ExecutorService databaseWriteExecutor =
             Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
-    static AppDataBase getDatabase(final Context context) {
+    static AppDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
-            synchronized (AppDataBase.class) {
+            synchronized (AppDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            AppDataBase.class, "app_database")
+                            AppDatabase.class, "app_database")
                             .build();
                 }
             }
