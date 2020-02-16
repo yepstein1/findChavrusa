@@ -56,7 +56,6 @@ public class DisplayTopicsActivity extends AppCompatActivity {
         topic = s;
 
 
-
     }
 
 

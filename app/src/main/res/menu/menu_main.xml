@@ -2,16 +2,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activities.InsertTopicActivity">
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
 
-
-        app:showAsAction="always" />
     <item
         android:id="@+id/action_sbout"
-        android:icon="@drawable/search_page_background"
+        android:icon="@drawable/about_icon_foreground"
         android:title="@string/action_favorite"
 
         android:color="#FFFFFF"

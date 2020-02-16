@@ -30,8 +30,6 @@ public class InsertTopicActivity extends AppCompatActivity {
         mModel = new ViewModelProvider(this).get(AppViewModel.class);
 
 
-
-
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".activities.BrowseActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.AboutActivity">
 
 
     <item
-        android:id="@+id/action_toggle_auto_save"
-        android:title="@string/title_use_auto_save"
-        android:checkable="true"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/action_sbout"
-        android:icon="@drawable/about_icon_foreground"
+        android:id="@+id/action_browse"
+        android:icon="@drawable/ic_explore"
         android:title="@string/action_favorite"
 
         android:color="#FFFFFF"
@@ -26,5 +20,4 @@
 
         android:color="#FFFFFF"
         app:showAsAction="always" />
-
 </menu>
